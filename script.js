@@ -35,7 +35,8 @@ function evaluar(a,res) {
 function OprAleat() {
     let num1 = Math.floor(Math.random() * 11)
     let num2 = Math.floor(Math.random() * 11)
-    let resultado = operador1 + operador2;
+    let resultado = num1 + num2;
+    resultadotext.textContent = ""
 
     operador1.textContent = num1;
     operador2.textContent = num2;
@@ -54,17 +55,26 @@ function cambiarBtns(resul) {
         btntext1.innerHTML = resul;
         btntext2.innerHTML = (resul + 1);
         btntext3.innerHTML = (resul - 1);
+        btn1.value = resul;
+        btn2.value = (resul + 1);
+        btn3.value = (resul - 1);
     }
     if (numAleatorio === 1) {
         //console.log(typeof resul)
         btntext1.innerHTML = (resul + 1);
         btntext2.innerHTML = (resul);
         btntext3.innerHTML = (resul - 1);
+        btn1.value =(resul + 1);
+        btn2.value =(resul);
+        btn3.value =(resul - 1);
     }
     if (numAleatorio === 2) {
         //console.log(typeof resul)
         btntext1.innerHTML = (resul + 1);
         btntext2.innerHTML = (resul - 1);
         btntext3.innerHTML = resul;
+        btn1.value =(resul + 1)
+        btn2.value =(resul - 1)
+        btn3.value =resul;
     }
 }
